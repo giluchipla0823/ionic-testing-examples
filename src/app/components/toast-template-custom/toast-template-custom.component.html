@@ -1,0 +1,12 @@
+<div>
+  {{ message }} 
+  
+  <ng-container *ngIf="!actionsTemplate;">
+    <ion-button size="sm" (click)="onHandleClick()" expand="block" shape="round">
+      {{ buttonText }}
+    </ion-button>
+  </ng-container>
+
+  <ng-container *ngIf="actionsTemplate" [ngTemplateOutlet]="actionsTemplate"></ng-container>
+  
+</div>

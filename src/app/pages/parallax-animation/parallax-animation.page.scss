@@ -1,0 +1,31 @@
+.main-content {
+    background-color: #fff;
+    padding: 16px;
+    width: 100%;
+    position: absolute;
+    margin-top: -4rem;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+  }
+
+  ion-infinite-scroll ::ng-deep {
+    ion-infinite-scroll-content {
+        .infinite-loading {
+            margin-bottom: 0;
+        }
+    }
+  }
+
+  ion-header {
+    position: absolute;
+
+    ion-toolbar {
+        --background: transparent;
+        --ion-color-base: transparent !important;
+
+        &.toolbar-expanded {
+            --background: inherit;
+            --ion-color-base: var(--ion-color-primary, #3880ff) !important
+        }
+    }
+  }

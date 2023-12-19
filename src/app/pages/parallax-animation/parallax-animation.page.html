@@ -1,0 +1,32 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar color="primary">
+    <ion-title> Parallax </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content
+  [fullscreen]="true"
+  [scrollEvents]="true"
+  appParallaxHeader
+  [parallaxImagePath]="'https://picsum.photos/id/237/1200/400?random=1'"
+  [parallaxHeight]="300"
+>
+  <div class="main-content">
+    <ion-list lines="none">
+      <ion-item *ngFor="let item of [].constructor(30); let i = index">
+        <ion-avatar slot="start">
+          <img [src]="'https://picsum.photos/id/237/200/300?random=' + (i + 1)" />
+        </ion-avatar>
+        <ion-label>Hello there {{ i + 1 }}</ion-label>
+      </ion-item>
+    </ion-list>
+
+    <ion-infinite-scroll threshold="25%"  >
+      <ion-infinite-scroll-content loadingSpinner="bubbles" loadingText="Loading more data...">
+      </ion-infinite-scroll-content>
+    </ion-infinite-scroll>
+
+    
+  </div>
+
+
+</ion-content>

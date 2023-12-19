@@ -1,0 +1,22 @@
+<ion-header >
+  <ion-toolbar>
+    <ion-title>example-animation</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content >
+
+  <ion-button  expand="block" fill="clear" shape="round" (click)="open()">
+    OPEN ANIMATION
+  </ion-button>
+
+
+  <div id="box" (click)="box()" (animationend)="animationend()">
+    <div class="menu">
+        <ul>
+            <li *ngFor="let item of [].constructor(10)">{{ item + 1 }}</li>
+        </ul>
+    </div>
+</div>
+  
+</ion-content>
